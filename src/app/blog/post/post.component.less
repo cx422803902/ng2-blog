@@ -1,0 +1,136 @@
+.post-header {
+  min-height: 120px;
+  text-align: center;
+  padding-top: 80px;
+  padding-bottom: 150px;
+  background: #F4F4F4;
+  border-top: 1px inset #4b5257;
+  .post-title {
+
+  }
+  .post-date {
+
+  }
+}
+
+.post-body {
+  min-height: 700px;
+  background: #DDDDDD;
+  padding-bottom: 100px;
+  position: relative;
+  > div {
+    > div {
+      position: relative;
+      top: -100px;
+      min-height: 700px;
+      background: #FFFFFF;
+      padding: 40px 20px;
+    }
+  }
+}
+
+.post-comment {
+  background: #CCCCCC;
+  .comment-edit {
+    padding-top: 50px;
+    padding-bottom: 5px;
+    > div {
+      height: 120px;
+      background: #FFFFFF;
+      > div {
+        display: inline-block;
+      }
+      .comment-edit-logo {
+        width: 10%;
+        margin-top: 20px;
+        text-align: center;
+      }
+      .post-detail-virtual-out-border {
+        width: 100%;
+        height: 100%;
+        position: relative;
+      }
+      .post-detail-virtual-inner-border {
+        width: 100%;
+        height: 100%;
+        border: 1px solid #DDD;
+      }
+      .post-detail-virtual-inner-border:before {
+        content: '';
+        position: absolute;
+        display: block;
+        width: 14px;
+        height: 14px;
+        top: 14px;
+        left: -7px;
+        border: 1px solid #ddd;
+        border-width: 0 0 1px 1px;
+        background: #fff;
+        -webkit-transform: rotate(45deg);
+        -moz-transform: rotate(45deg);
+        transform: rotate(45deg);
+      }
+      .comment-edit-area {
+        width: 90%;
+        height: 100%;
+        position: relative;
+        float: right;
+        padding: 10px 10px 10px 10px;
+        textarea {
+          border-style:none;
+          padding: 10px 10px 10px 10px;
+          width: 100%;
+          height: 100%;
+          -webkit-appearance: none;
+          -moz-appearance: none;
+          appearance: none;
+        }
+        textarea:focus {
+          outline: none;
+        }
+      }
+    }
+  }
+  .comment-list {
+    padding-top: 10px;
+    padding-bottom: 50px;
+    > div {
+      min-height: 120px;
+      background: #FFFFFF;
+    }
+    .comment-item + .comment-item{
+      border-top: 1px solid #DDD;
+    }
+    .comment-item {
+      position: relative;
+      overflow: auto;
+      .comment-item-logo {
+        width: 10%;
+        height: 100%;
+        display: inline-block;
+      }
+      .comment-item-content {
+        width: 90%;
+        height: 100%;
+        position: relative;
+        float: right;
+        padding: 10px;
+        >* {
+          padding-bottom: 10px;
+        }
+        footer {
+          color: #AAA;
+          >div {
+            display: inline-block;
+          }
+          >a {
+            position: relative;
+            float: right;
+            padding-right: 20px;
+          }
+        }
+      }
+    }
+  }
+}
+
