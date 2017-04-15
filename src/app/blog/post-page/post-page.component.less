@@ -1,0 +1,148 @@
+:host {
+  display: block;
+  position: relative;
+  min-height: 800px;
+  height: auto;
+  background: #AAAAAA;
+  width: 100%;
+}
+
+.post-header {
+  display: block;
+  position: relative;
+  min-height: 120px;
+  text-align: center;
+  padding-top: 80px;
+  padding-bottom: 150px;
+  background: #F4F4F4;
+  border-top: 1px inset #4b5257;
+}
+
+.post-body {
+  min-height: 700px;
+  background: #DDDDDD;
+  padding-bottom: 100px;
+  position: relative;
+  .post-detail {
+    position: relative;
+    top: -100px;
+    min-height: 700px;
+    background: #FFFFFF;
+    padding: 40px 20px;
+    pre{
+      overflow: hidden;
+    }
+  }
+}
+
+.comment-container {
+  background: #CCCCCC;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  height: auto;
+  textarea:focus {
+    outline: none;
+  }
+
+  .edit-container {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    height: auto;
+    background: #FFFFFF;
+    .logo {
+      display: inline-block;
+      position: relative;
+      width: 10%;
+      margin-top: 20px;
+      text-align: center;
+    }
+    .edit-area {
+      display: inline-block;;
+      position: relative;
+      width: 90%;
+      float: right;
+      padding: 10px 10px 10px 10px;
+      textarea {
+        border-style: none;
+        padding: 10px 10px 10px 10px;
+        width: 100%;
+        height: 100%;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+      }
+    }
+
+    .edit-out-border {
+      width: 100%;
+      position: relative;
+    }
+    .edit-inner-border {
+      width: 100%;
+      border: 1px solid #DDD;
+    }
+    .edit-inner-border:before {
+      content: '';
+      position: absolute;
+      display: block;
+      width: 14px;
+      height: 14px;
+      top: 14px;
+      left: -7px;
+      border: 1px solid #ddd;
+      border-width: 0 0 1px 1px;
+      background: #fff;
+      -webkit-transform: rotate(45deg);
+      -moz-transform: rotate(45deg);
+      transform: rotate(45deg);
+    }
+
+    .edit-submit {
+      display: block;
+      position: relative;
+      padding: 5px 10px 5px 10px;
+      clear: both;
+      height: auto;
+      overflow: auto;
+    }
+  }
+
+  .comment-list {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    min-height: 120px;
+    background: #FFFFFF;
+    .comment-item + .comment-item {
+      border-top: 1px solid #DDD;
+    }
+    .comment-item {
+      position: relative;
+      overflow: auto;
+      .logo {
+        width: 10%;
+        display: inline-block;
+      }
+      .content {
+        width: 90%;
+        position: relative;
+        float: right;
+        padding: 10px;
+        > * {
+          padding-bottom: 10px;
+        }
+        footer {
+          color: #AAA;
+          > div {
+            display: inline-block;
+          }
+          > a {
+            position: relative;
+            float: right;
+            padding-right: 20px;
+          }
+        }
+      }
+    }
+  }
+}
+

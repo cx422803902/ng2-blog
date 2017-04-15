@@ -1,0 +1,20 @@
+<div class="blog-summary">
+  <a routerLink="/blog/post/{{postId}}">
+    <div class="summary-img" *ngIf="infoImg !== undefined">
+      <img src="{{infoImg}}" alt="{{title}}">
+    </div>
+    <div class="summary-title">{{title}}</div>
+    <div class="summary-info">
+      <p>{{info}}</p>
+    </div>
+  </a>
+  <footer>
+    <div class="summary-tag">
+      <strong>tags</strong>
+      <a *ngFor="let tag of tags">{{tag}}</a>
+    </div>
+    <div class="summary-date">
+      {{postDate | date:'yMMMMd'}}
+    </div>
+  </footer>
+</div>

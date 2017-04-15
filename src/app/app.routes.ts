@@ -1,19 +1,8 @@
-import {ModuleWithProviders} from "@angular/core";
-import {RouterModule, Routes} from "@angular/router";
-import {BlogComponent} from "./blog/blog.component";
-import {HomeComponent, TagPostsComponent} from "./blog/home/home.component";
-import {PostComponent} from "./blog/post/post.component";
-
-const routes: Routes = [
-  {
-    path: '', component: BlogComponent,
-    children: [
-      {path: '', component: HomeComponent},
-      {path: 'tag/:tagId', component: TagPostsComponent},
-      {path: 'post/:postId', component: PostComponent}
-    ]
-  }
-]
-
-export const routing: ModuleWithProviders = RouterModule.forRoot(routes);
-
+import {Routes} from '@angular/router';
+import {LoginComponent} from './login/login.component';
+export const routes: Routes = [
+  {path: '', redirectTo: 'blog', pathMatch: 'full'},
+  {path: 'login', component: LoginComponent},
+  {path: 'blog', loadChildren: './blog/blog.module#BlogModule'},
+  {path: 'manage', loadChildren: './manage/manage.module#ManageModule'}
+];

@@ -1,16 +1,17 @@
-import {Component, OnInit} from "@angular/core";
-
+import {Component} from '@angular/core';
+import {UserAuthService} from '../shared/user-auth.service';
 @Component({
-  selector: 'app-blog',
+  selector: 'app-blog-root',
   templateUrl: './blog.component.html',
-  styleUrls: ['./blog.component.less']
+  styleUrls: [
+    './blog.component.less'
+  ]
 })
-export class BlogComponent implements OnInit {
-
-  constructor() {
+export class BlogComponent {
+  constructor(private userAuthService: UserAuthService) {
   }
 
-  ngOnInit() {
+  getUserAuthService(): UserAuthService {
+    return this.userAuthService;
   }
-
 }

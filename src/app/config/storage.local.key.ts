@@ -1,0 +1,1 @@
+export const CURRENT_USER_KEY: string = 'current_user';

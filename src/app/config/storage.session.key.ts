@@ -1,0 +1,1 @@
+export const URL_BEFORE_LOGIN: string = 'url_before_login';
