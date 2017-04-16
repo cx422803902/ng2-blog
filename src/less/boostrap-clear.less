@@ -3,3 +3,13 @@ a, abbr, address, article, aside, audio, b, blockquote, body, canvas, caption, c
   padding: 0;
   border: 0;
 }
+
+ul, ol, li {
+  list-style: none;
+}
+
+.block-link {
+  &:link, &:hover, &:visited, &:active, &:focus {
+    text-decoration: none;
+  }
+}

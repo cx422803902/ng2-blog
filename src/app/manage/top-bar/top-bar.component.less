@@ -1,0 +1,50 @@
+@import '../../theme/admin/theme';
+
+:host {
+  display: block;
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: @top_bar_height;
+  min-width: 100%;
+  width: 100%;
+  background: @top_bar_bg;
+  z-index: @top_bar_z;
+  * {
+    color: @top_bar_color;
+  }
+}
+
+.logo-link {
+  font-family: Ionicons;
+  display: block;
+  line-height: @top_bar_height;
+  float: left;
+  width: @aside_bar_width;
+}
+
+.collapse-link {
+  font-family: Ionicons;
+  display: block;
+  line-height: 42px;
+  font-size: 31px;
+  float: left;
+  margin: 11px 0 0 25px;
+  white-space: nowrap;
+  &:before {
+    content: '\F20E';
+  }
+}
+
+.user-info-panel {
+  float: right;
+  margin-right: 20px;
+  height: 100%;
+  a {
+    display: inline-block;
+    height: 100%;
+    line-height: @top_bar_height;
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+}

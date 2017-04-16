@@ -1,0 +1,35 @@
+@import '../../../theme/admin/theme';
+
+@item_height: 31px;
+@item_padding_top: 5px;
+@item_padding_bottom: 5px;
+@item_padding_left: 22px;
+@item_paddig_right: 10px;
+
+
+li {
+  padding: 0;
+  height: @item_height;
+  overflow: hidden;
+  >a {
+    padding: @item_padding_top @item_paddig_right @item_padding_bottom @item_padding_left;
+    display: inline-block;
+    line-height: @item_height;
+    height: @item_height;
+    width: @aside_bar_width;
+    >span {
+      position: absolute;
+      left: @aside_bar_width_collapsed + 10px;
+    }
+  }
+  >a.selected {
+    background: @menu_selected_bg;
+  }
+  a {
+    color: @aside_bar_color;
+  }
+}
+.child-container {
+  display: none;
+}
+

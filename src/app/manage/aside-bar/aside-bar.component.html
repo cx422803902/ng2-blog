@@ -1,0 +1,7 @@
+<aside [ngClass]="{'menu-collapsed': menu_collapsed}">
+  <app-menu-item
+    *ngFor="let item of items"
+    [item]="item"
+    (selecteMenu)="doSelectMenu($event)">
+  </app-menu-item>
+</aside>

@@ -1,0 +1,22 @@
+@import '../../theme/admin/theme';
+
+aside {
+  display: block;
+  position: fixed;
+  left: 0;
+  top: @top_bar_height;
+  width: @aside_bar_width;
+  min-height: 100%;
+  height: 100%;
+  padding: 0;
+  background: @aside_bar_bg;
+  z-index: @aside_bar_z;
+  * {
+    color: @aside_bar_color;
+  }
+  overflow: hidden;
+}
+
+aside.menu-collapsed {
+  width: @aside_bar_width_collapsed;
+}
