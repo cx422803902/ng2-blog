@@ -15,7 +15,7 @@ export class AsideBarComponent implements OnInit {
       children: [
         {name: 'editor', title: 'editor', url:'/manage/editor'}
       ]
-    }
+}
   ];
 
   constructor(private globalState: GlobalState) {

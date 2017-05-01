@@ -83,7 +83,8 @@ export class UserAuthService {
   }
 
   doCheckLogin(): boolean {
-    return this.user != null && this.user.status == UserStatus.LOGIN;
+    return true;
+    //return this.user != null && this.user.status == UserStatus.LOGIN;
   }
 
   login(userName: string, password: string): Promise<User> {

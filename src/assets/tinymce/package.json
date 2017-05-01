@@ -1,0 +1,90 @@
+{
+  "_args": [
+    [
+      {
+        "raw": "tinymce@^4.5.6",
+        "scope": null,
+        "escapedName": "tinymce",
+        "name": "tinymce",
+        "rawSpec": "^4.5.6",
+        "spec": ">=4.5.6 <5.0.0",
+        "type": "range"
+      },
+      "E:\\Workspace\\git\\blog-chenxing\\front-end"
+    ]
+  ],
+  "_cnpm_publish_time": 1493124457709,
+  "_from": "tinymce@>=4.5.6 <5.0.0",
+  "_hasShrinkwrap": false,
+  "_id": "tinymce@4.5.7",
+  "_inCache": true,
+  "_location": "/tinymce",
+  "_nodeVersion": "7.2.1",
+  "_npmOperationalInternal": {
+    "host": "packages-12-west.internal.npmjs.com",
+    "tmp": "tmp/tinymce-4.5.7.tgz_1493124457385_0.8734609230887145"
+  },
+  "_npmUser": {
+    "name": "ephox",
+    "email": "is-accounts@ephox.com"
+  },
+  "_npmVersion": "3.10.10",
+  "_phantomChildren": {},
+  "_requested": {
+    "raw": "tinymce@^4.5.6",
+    "scope": null,
+    "escapedName": "tinymce",
+    "name": "tinymce",
+    "rawSpec": "^4.5.6",
+    "spec": ">=4.5.6 <5.0.0",
+    "type": "range"
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "https://registry.npm.taobao.org/tinymce/download/tinymce-4.5.7.tgz",
+  "_shasum": "e1f5cd286ec3c9977bd672a4c14e496f63bc4fef",
+  "_shrinkwrap": null,
+  "_spec": "tinymce@^4.5.6",
+  "_where": "E:\\Workspace\\git\\blog-chenxing\\front-end",
+  "bugs": {
+    "url": "http://www.tinymce.com/develop/bugtracker.php"
+  },
+  "dependencies": {},
+  "description": "Web based JavaScript HTML WYSIWYG editor control.",
+  "devDependencies": {},
+  "directories": {},
+  "dist": {
+    "shasum": "e1f5cd286ec3c9977bd672a4c14e496f63bc4fef",
+    "size": 1435997,
+    "noattachment": false,
+    "tarball": "http://registry.npm.taobao.org/tinymce/download/tinymce-4.5.7.tgz"
+  },
+  "keywords": [
+    "editor",
+    "wysiwyg",
+    "tinymce",
+    "richtext",
+    "javascript",
+    "html"
+  ],
+  "license": "LGPL-2.1",
+  "main": "tinymce.js",
+  "maintainers": [
+    {
+      "name": "ephox",
+      "email": "is-accounts@ephox.com"
+    },
+    {
+      "name": "spocke",
+      "email": "spocke@moxiecode.com"
+    }
+  ],
+  "name": "tinymce",
+  "optionalDependencies": {},
+  "publish_time": 1493124457709,
+  "readme": "ERROR: No README data found!",
+  "scripts": {},
+  "version": "4.5.7"
+}

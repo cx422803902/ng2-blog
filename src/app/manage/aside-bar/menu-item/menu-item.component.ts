@@ -21,7 +21,6 @@ export class MenuItemComponent implements OnInit {
 
   doClickItem(currentTarget: any): boolean {
     this.expand = !this.expand;
-    console.log('has ttt ' +this.expand);
     let subMenu = jQuery(currentTarget).parent().next();
     if(this.expand) {
       subMenu.slideDown();
