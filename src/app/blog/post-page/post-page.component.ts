@@ -35,5 +35,8 @@ export class PostPageComponent implements OnInit {
   }
 
   doSubmitComment(): void {
+    console.log('this is comment\' input');
+    console.log(this.commentText);
+    //TODO then send post to server
   }
 }
