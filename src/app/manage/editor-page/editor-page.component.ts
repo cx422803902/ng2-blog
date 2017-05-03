@@ -46,6 +46,7 @@ export class EditorPageComponent implements OnInit, AfterViewInit, OnDestroy{
       name: 'content',
       value: content
     });
+    //TODO then send post to server!
     console.log('arr is :');
     console.log(formData);
     return false;
