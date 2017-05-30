@@ -83,13 +83,16 @@ export class UserAuthService {
   }
 
   doCheckLogin(): boolean {
-    return true;
-    //return this.user != null && this.user.status == UserStatus.LOGIN;
+    return this.user != null && this.user.status == UserStatus.LOGIN;
   }
 
   login(userName: string, password: string): Promise<User> {
+    let body: any = {
+      userName: userName,
+      password: password
+    };
     return this.http
-      .get(URLS.login)
+      .post(URLS.login, body)
       .map(response => {
         if (response.ok) {
           return response.json().data;
@@ -100,8 +103,11 @@ export class UserAuthService {
   }
 
   logout(userName: string): Promise<boolean> {
+    let body : any = {
+      userName: userName
+    };
     return this.http
-      .get(URLS.logout)
+      .post(URLS.logout, body)
       .map(response => {
         if (response.ok) {
           return response.json().data;

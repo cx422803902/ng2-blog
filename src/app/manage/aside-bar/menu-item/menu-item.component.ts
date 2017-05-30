@@ -8,8 +8,8 @@ import {MenuItem} from './menu-item.model';
 })
 export class MenuItemComponent implements OnInit {
 
+  expand: boolean = false;
   @Input() item: MenuItem;
-  private expand: boolean = false;
 
   @Output() selecteMenu = new EventEmitter<MenuItem>();
 

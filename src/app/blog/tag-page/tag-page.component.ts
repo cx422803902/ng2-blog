@@ -12,9 +12,9 @@ import {BlogHttpService} from '../blog.http.service';
   ]
 })
 export class TagPageComponent implements OnInit {
-  private tags: BlogTag[] = [];
-  private summaries: BlogSummary[] = [];
-  private tagId: number = undefined;
+  tags: BlogTag[] = [];
+  summaries: BlogSummary[] = [];
+  tagId: number = undefined;
 
   constructor(private blogHttpService: BlogHttpService, private route: ActivatedRoute) {
   }

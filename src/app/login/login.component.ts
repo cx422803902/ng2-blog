@@ -9,8 +9,8 @@ import {UserAuthService} from '../shared/user-auth.service';
 })
 export class LoginComponent implements OnInit {
 
-  private userName: string;
-  private password: string;
+  userName: string;
+  password: string;
 
   constructor(private userAuthService: UserAuthService) {
   }

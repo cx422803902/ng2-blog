@@ -8,8 +8,8 @@ import {MenuItem} from './menu-item/menu-item.model';
   styleUrls: ['./aside-bar.component.less']
 })
 export class AsideBarComponent implements OnInit {
-  private menu_collapsed: boolean = false;
-  private items: MenuItem[] = [
+  menu_collapsed: boolean = false;
+  items: MenuItem[] = [
     {name: 'manage', title: 'Manager', icon: 'ion-android-home', url: '/manage'},
     {name: 'post', title: 'Post', icon: 'ion-edit',
       children: [

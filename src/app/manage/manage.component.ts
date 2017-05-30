@@ -9,7 +9,7 @@ import {UserAuthService} from '../shared/user-auth.service';
   ]
 })
 export class ManageComponent implements OnInit {
-  private menu_collapsed: boolean = false;
+  menu_collapsed: boolean = false;
 
   constructor(private userAuthService: UserAuthService, private globalState: GlobalState) {
     this.globalState.subscription(GlobalEvent.ADMIN_MENU_COLLAPSE, menu_collpased => this.menu_collapsed = menu_collpased);

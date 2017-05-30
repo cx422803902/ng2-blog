@@ -15,7 +15,7 @@ export class BlogHttpService {
 
   loadTags(): Promise<BlogTag[]> {
     return this.http
-      .get(URLS.tags)
+      .post(URLS.tags, null)
       .map(response => {
         if (response.ok) {
           /** it must return a array*/
@@ -33,7 +33,7 @@ export class BlogHttpService {
 
   loadBlogSummaries(): Promise<BlogSummary[]> {
     return this.http
-      .get(URLS.sumarries)
+      .post(URLS.sumarries, null)
       .map(response => {
         if (response.ok) {
           /** it must return a array*/
@@ -57,12 +57,11 @@ export class BlogHttpService {
   }
 
   loadBlogSummariesByTag(tagId: number): Promise<BlogSummary[]> {
-    let requestArgs: RequestArgs = {
-      url: URLS.tagPosts,
-      params: `tagId=${tagId}`
+    let body : any = {
+      tagId: tagId
     };
     return this.http
-      .get(URLS.tagPosts, requestArgs)
+      .post(URLS.tagPosts, body)
       .map(response => {
         if (response.ok) {
           /** it must return a array*/
@@ -86,12 +85,11 @@ export class BlogHttpService {
   }
 
   loadBlogDetail(postId: number): Promise<BlogDetail> {
-    let requestArgs: RequestArgs = {
-      url: URLS.detail,
-      params: `postId=${postId}`
+    let body: any = {
+      postId: postId
     };
     return this.http
-      .get(URLS.detail, requestArgs)
+      .post(URLS.detail, body)
       .map(response => {
         if (response.ok) {
           let item: any = response.json().data;
@@ -112,12 +110,11 @@ export class BlogHttpService {
   }
 
   loadBlogCommentsByPost(postId: number): Promise<BlogComment[]> {
-    let requestArgs: RequestArgs = {
-      url: URLS.postComments,
-      params: `postId=${postId}`
+    let body: any = {
+      postId: postId
     };
     return this.http
-      .get(URLS.postComments, requestArgs)
+      .post(URLS.postComments, body)
       .map(response => {
         if (response.ok) {
           /** it must return a array*/

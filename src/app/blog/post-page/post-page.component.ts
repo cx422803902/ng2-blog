@@ -11,9 +11,9 @@ import {BlogHttpService} from '../blog.http.service';
   encapsulation: ViewEncapsulation.None
 })
 export class PostPageComponent implements OnInit {
-  private blogDetail: BlogDetail = DEFAULT_BLOG_DETAIL;
-  private blogComments: BlogComment[] = [];
-  private commentText: string;
+  blogDetail: BlogDetail = DEFAULT_BLOG_DETAIL;
+  blogComments: BlogComment[] = [];
+  commentText: string;
 
   constructor(private blogHttpService: BlogHttpService, private route: ActivatedRoute) {
   }
