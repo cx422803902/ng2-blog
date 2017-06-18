@@ -16,11 +16,11 @@ export class UserAuthService {
 
   private constructor(private http: Http, private router: Router) {
     let jsonUser: string = localStorage.getItem(STORAGE_LOCAL_KEY.CURRENT_USER_KEY);
-    if (jsonUser != null) {
+    if (jsonUser != undefined) {
       this.user = JSON.parse(jsonUser);
       this.user.status = UserStatus.LOGOUT;
     }
-    if (this.user != null && this.user.rememberMe) {
+    if (this.user != undefined && this.user.rememberMe) {
       this.doLogin(this.user.userName, this.user.password);
     }
   }
@@ -64,7 +64,7 @@ export class UserAuthService {
   }
 
   doForget(): void {
-    if (this.user != null) {
+    if (this.user != undefined) {
       console.log('htht');
       this.user.rememberMe = false;
       this.updateUser(this.user);
@@ -72,7 +72,7 @@ export class UserAuthService {
   }
 
   doLogout(): void {
-    if (this.user != null) {
+    if (this.user != undefined) {
       this.logout(this.user.userName)
         .then(success => {
           this.user.status = UserStatus.LOGOUT;
@@ -83,7 +83,9 @@ export class UserAuthService {
   }
 
   doCheckLogin(): boolean {
-    return this.user != null && this.user.status == UserStatus.LOGIN;
+    console.log('hehehehehe');
+    console.log(this.user);
+    return this.user != undefined && this.user.status == UserStatus.LOGIN;
   }
 
   login(userName: string, password: string): Promise<User> {
