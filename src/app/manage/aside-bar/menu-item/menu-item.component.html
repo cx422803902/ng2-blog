@@ -3,7 +3,7 @@
     <i *ngIf="item.icon" class="{{item.icon}}"></i>
     <span>{{item.title}}</span>
   </a>
-  <a *ngIf="!item.url && item.children==undefined" (click)="doClickItem($event.currentTarget)" [ngClass]="{'selected':item.selected}" class="block-link">
+  <a *ngIf="!item.url && item.children!=undefined" (click)="doClickItem($event.currentTarget)" [ngClass]="{'selected':item.selected}" class="block-link">
     <i *ngIf="item.icon" class="{{item.icon}}"></i>
     <span>{{item.title}}</span>
     <b class="fa pull-right" [ngClass]="{'fa-angle-up':expand, 'fa-angle-down':!expand}"></b>

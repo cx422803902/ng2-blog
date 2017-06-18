@@ -5,8 +5,8 @@ export interface BlogDetail {
   infoImg?: string;
   content: string;
   tags: string[];
-  updateDate: Date;
-  postDate: Date;
+  updateDate?: Date;
+  postDate?: Date;
 }
 
 export const DEFAULT_BLOG_DETAIL: BlogDetail = {

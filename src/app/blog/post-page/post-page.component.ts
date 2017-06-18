@@ -14,6 +14,7 @@ export class PostPageComponent implements OnInit {
   blogDetail: BlogDetail = DEFAULT_BLOG_DETAIL;
   blogComments: BlogComment[] = [];
   commentText: string;
+  commentAuthor: string;
 
   constructor(private blogHttpService: BlogHttpService, private route: ActivatedRoute) {
   }
@@ -35,8 +36,26 @@ export class PostPageComponent implements OnInit {
   }
 
   doSubmitComment(): void {
-    console.log('this is comment\' input');
-    console.log(this.commentText);
-    //TODO then send post to server
+    let comment: BlogComment = {
+      id: undefined,
+      postId: this.blogDetail.id,
+      author: this.commentAuthor,
+      content: this.commentText,
+    };
+    this.blogHttpService.commitBlogComment(comment)
+      .then(response => {
+        if(response.ok) {
+          let data = response.json();
+          comment.id = data.id;
+          comment.postDate = data.postData;
+          this.blogComments.push(comment);
+          this.commentText = "";
+          this.commentAuthor = "";
+          alert('commit comment success!');
+        }else {
+          console.log('commit comment failed with code' + response.status);
+        }
+      })
+      .catch(message => console.log('commit comment failed cause of' + message));
   }
 }

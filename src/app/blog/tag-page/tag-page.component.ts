@@ -29,11 +29,10 @@ export class TagPageComponent implements OnInit {
     this.selectedTagId = params['id'];
     this.blogHttpService
       .loadTags()
-      .then(tags => this.tags = tags)
-      .then(() =>
-        this.blogHttpService
-        .loadBlogSummariesByTag(this.selectedTagId)
-        .then(summaries => this.summaries = summaries));
+      .then(tags => this.tags = tags);
+    this.blogHttpService
+      .loadBlogSummariesByTag(this.selectedTagId)
+      .then(summaries => this.summaries = summaries)
 
   }
 

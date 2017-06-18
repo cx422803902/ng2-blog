@@ -8,6 +8,7 @@ import {manageRoutes} from './manage.routes';
 import {TopBarComponent} from './top-bar/top-bar.component';
 import { MenuItemComponent } from './aside-bar/menu-item/menu-item.component';
 import { EditorPageComponent } from './editor-page/editor-page.component';
+import {BlogHttpService} from '../blog/blog.http.service';
 @NgModule({
   imports: [
     SharedModule,
@@ -20,6 +21,9 @@ import { EditorPageComponent } from './editor-page/editor-page.component';
     TopBarComponent,
     MenuItemComponent,
     EditorPageComponent
+  ],
+  providers: [
+    BlogHttpService
   ]
 })
 export class ManageModule {

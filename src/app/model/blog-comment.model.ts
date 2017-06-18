@@ -3,7 +3,7 @@ export interface BlogComment {
   postId: number;
   author: string;
   content: string;
-  postDate: Date;
+  postDate?: Date;
   parentId?: number;
 }
 

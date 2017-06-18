@@ -1,6 +1,5 @@
 import {Injectable} from '@angular/core';
-import {Http} from '@angular/http';
-import {RequestArgs} from '@angular/http/src/interfaces';
+import {Http, Response} from '@angular/http';
 import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/toPromise';
 import {URLS} from '../config/web-api.config';
@@ -15,12 +14,12 @@ export class BlogHttpService {
 
   loadTags(): Promise<BlogTag[]> {
     return this.http
-      .post(URLS.tags, null)
+      .post(URLS.tags, {})
       .map(response => {
         if (response.ok) {
           /** it must return a array*/
           let blogTags: BlogTag[] = [];
-          let items: any[] = response.json().data;
+          let items: any[] = response.json();
           for (let i = 0; i < items.length; i++) {
             let item: any = items[i];
             blogTags.push({id: item.id, name: item.name, blogCount: item.blogCount});
@@ -33,12 +32,12 @@ export class BlogHttpService {
 
   loadBlogSummaries(): Promise<BlogSummary[]> {
     return this.http
-      .post(URLS.sumarries, null)
+      .post(URLS.sumarries, {})
       .map(response => {
         if (response.ok) {
           /** it must return a array*/
           let blogSummaries: BlogSummary[] = [];
-          let items: any[] = response.json().data;
+          let items: any[] = response.json();
           for (let i = 0; i < items.length; i++) {
             let item: any = items[i];
             blogSummaries.push({
@@ -66,7 +65,7 @@ export class BlogHttpService {
         if (response.ok) {
           /** it must return a array*/
           let blogSummaries: BlogSummary[] = [];
-          let items: any[] = response.json().data;
+          let items: any[] = response.json();
           for (let i = 0; i < items.length; i++) {
             let item: any = items[i];
             blogSummaries.push({
@@ -92,7 +91,7 @@ export class BlogHttpService {
       .post(URLS.detail, body)
       .map(response => {
         if (response.ok) {
-          let item: any = response.json().data;
+          let item: any = response.json();
           return {
             id: item.id,
             title: item.title,
@@ -119,7 +118,7 @@ export class BlogHttpService {
         if (response.ok) {
           /** it must return a array*/
           let blogComments: BlogComment[] = [];
-          let items: any[] = response.json().data;
+          let items: any[] = response.json();
           for (let i = 0; i < items.length; i++) {
             let item: any = items[i];
             blogComments.push({
@@ -135,5 +134,28 @@ export class BlogHttpService {
         }
       })
       .toPromise();
+  }
+
+  /**if success, must return the generator id*/
+  commitBlogComment(comment: BlogComment): Promise<Response> {
+    let body : any = {
+      postId: comment.postId,
+      author: comment.author,
+      content: comment.content,
+      parentId: comment.parentId
+    };
+    return this.http
+      .post(URLS.commitComment, body).toPromise();
+  }
+
+  commitBlogPost(post: BlogDetail): Promise<Response> {
+    let body: any = {
+      info: post.info,
+      infoImg: post.infoImg,
+      content: post.content,
+      tags: post.tags
+    };
+    return this.http
+      .post(URLS.commitPost, body).toPromise();
   }
 }

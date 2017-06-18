@@ -25,6 +25,7 @@
       </div>
       <div class="edit-submit">
         <button type="button" class="pull-right" (click)="doSubmitComment()">提交</button>
+        <input type="text" class="pull-right" placeholder="请输入姓名" [(ngModel)]="commentAuthor">
       </div>
     </div>
     <div class="app-container comment-list">
@@ -36,7 +37,7 @@
           <div>{{comment.content}}</div>
           <footer>
             <div class="comment-item-date">{{comment.postDate | date:'yMMMMd'}}</div>
-            <a href="/">回复</a>
+            <!--<a href="/">回复</a>-->
           </footer>
         </div>
       

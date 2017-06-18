@@ -95,7 +95,7 @@ export class UserAuthService {
       .post(URLS.login, body)
       .map(response => {
         if (response.ok) {
-          return response.json().data;
+          return response.json();
         }
         return null;
       })
@@ -110,7 +110,7 @@ export class UserAuthService {
       .post(URLS.logout, body)
       .map(response => {
         if (response.ok) {
-          return response.json().data;
+          return response.json();
         }
         return false;
       })
