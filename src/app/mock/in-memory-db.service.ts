@@ -5,24 +5,24 @@ import {BlogDetail} from '../model/blog-detail.model';
 import {BlogTag} from '../model/blog-tag.model';
 import {User} from '../model/user.model';
 const blogTags: BlogTag[] = [
-  {tagId: 1, tagContent: '标签1', tagCount: 1},
-  {tagId: 2, tagContent: '标签2', tagCount: 2},
-  {tagId: 3, tagContent: '标签3', tagCount: 3},
-  {tagId: 4, tagContent: '标签4', tagCount: 4},
-  {tagId: 5, tagContent: '标签5', tagCount: 5},
-  {tagId: 6, tagContent: '标签6', tagCount: 6},
-  {tagId: 7, tagContent: '标签7', tagCount: 7},
-  {tagId: 8, tagContent: '标签8', tagCount: 8},
-  {tagId: 9, tagContent: '标签9', tagCount: 9},
-  {tagId: 10, tagContent: '标签10', tagCount: 10},
-  {tagId: 11, tagContent: '标签11', tagCount: 11},
-  {tagId: 12, tagContent: '标签12', tagCount: 12},
-  {tagId: 13, tagContent: '标签13', tagCount: 13},
-  {tagId: 14, tagContent: '标签14', tagCount: 14}
+  {id: 1, name: '标签1', blogCount: 1},
+  {id: 2, name: '标签2', blogCount: 2},
+  {id: 3, name: '标签3', blogCount: 3},
+  {id: 4, name: '标签4', blogCount: 4},
+  {id: 5, name: '标签5', blogCount: 5},
+  {id: 6, name: '标签6', blogCount: 6},
+  {id: 7, name: '标签7', blogCount: 7},
+  {id: 8, name: '标签8', blogCount: 8},
+  {id: 9, name: '标签9', blogCount: 9},
+  {id: 10, name: '标签10', blogCount: 10},
+  {id: 11, name: '标签11', blogCount: 11},
+  {id: 12, name: '标签12', blogCount: 12},
+  {id: 13, name: '标签13', blogCount: 13},
+  {id: 14, name: '标签14', blogCount: 14}
 ];
 const blogSummaries: BlogSummary[] = [
   {
-    postId: 1,
+    id: 1,
     title: 'title1dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd',
     info: 'this is my info 范德萨分但是发送旅客的飞机撒到了风as了解的萨芬萨克发送大夫撒旦',
     infoImg: 'http://fun.youth.cn/yl24xs/201702/W020170217493133403781.jpg',
@@ -30,14 +30,14 @@ const blogSummaries: BlogSummary[] = [
     postDate: new Date()
   },
   {
-    postId: 2,
+    id: 2,
     title: 'title2',
     info: 'this is my info 2',
     tags: ['a2', 'b2', 'c2'],
     postDate: new Date()
-  },
+},
   {
-    postId: 3,
+    id: 3,
     title: 'title3',
     info: 'this is my info 3',
     infoImg: 'http://fun.youth.cn/yl24xs/201702/W020170217493133403781.jpg',
@@ -45,7 +45,7 @@ const blogSummaries: BlogSummary[] = [
     postDate: new Date()
   },
   {
-    postId: 4,
+    id: 4,
     title: 'title4',
     info: 'this is my info 4',
     infoImg: 'http://fun.youth.cn/yl24xs/201702/W020170217493133403781.jpg',
@@ -53,7 +53,7 @@ const blogSummaries: BlogSummary[] = [
     postDate: new Date()
   },
   {
-    postId: 5,
+    id: 5,
     title: 'title5',
     info: 'this is my info 5',
     infoImg: 'http://fun.youth.cn/yl24xs/201702/W020170217493133403781.jpg',
@@ -61,7 +61,7 @@ const blogSummaries: BlogSummary[] = [
     postDate: new Date()
   },
   {
-    postId: 6,
+    id: 6,
     title: 'title6',
     info: 'this is my info 6',
     infoImg: 'http://fun.youth.cn/yl24xs/201702/W020170217493133403781.jpg',
@@ -69,7 +69,7 @@ const blogSummaries: BlogSummary[] = [
     postDate: new Date()
   },
   {
-    postId: 2,
+    id: 2,
     title: 'title2',
     info: 'this is my info 2',
     infoImg: 'http://fun.youth.cn/yl24xs/201702/W020170217493133403781.jpg',
@@ -77,7 +77,7 @@ const blogSummaries: BlogSummary[] = [
     postDate: new Date()
   },
   {
-    postId: 2,
+    id: 2,
     title: 'title2',
     info: 'this is my info 2',
     infoImg: 'http://fun.youth.cn/yl24xs/201702/W020170217493133403781.jpg',
@@ -85,7 +85,7 @@ const blogSummaries: BlogSummary[] = [
     postDate: new Date()
   },
   {
-    postId: 2,
+    id: 2,
     title: 'title2',
     info: 'this is my info 2',
     infoImg: 'http://fun.youth.cn/yl24xs/201702/W020170217493133403781.jpg',
@@ -93,7 +93,7 @@ const blogSummaries: BlogSummary[] = [
     postDate: new Date()
   },
   {
-    postId: 2,
+    id: 2,
     title: 'title2',
     info: 'this is my info 2',
     infoImg: 'http://fun.youth.cn/yl24xs/201702/W020170217493133403781.jpg',
@@ -101,7 +101,7 @@ const blogSummaries: BlogSummary[] = [
     postDate: new Date()
   },
   {
-    postId: 2,
+    id: 2,
     title: 'title2',
     info: 'this is my info 2',
     infoImg: 'http://fun.youth.cn/yl24xs/201702/W020170217493133403781.jpg',
@@ -109,7 +109,7 @@ const blogSummaries: BlogSummary[] = [
     postDate: new Date()
   },
   {
-    postId: 2,
+    id: 2,
     title: 'title2',
     info: 'this is my info 2',
     infoImg: 'http://fun.youth.cn/yl24xs/201702/W020170217493133403781.jpg',
@@ -117,7 +117,7 @@ const blogSummaries: BlogSummary[] = [
     postDate: new Date()
   },
   {
-    postId: 2,
+    id: 2,
     title: 'title2',
     info: 'this is my info 2',
     infoImg: 'http://fun.youth.cn/yl24xs/201702/W020170217493133403781.jpg',
@@ -125,7 +125,7 @@ const blogSummaries: BlogSummary[] = [
     postDate: new Date()
   },
   {
-    postId: 2,
+    id: 2,
     title: 'title2',
     info: 'this is my info 2',
     infoImg: 'http://fun.youth.cn/yl24xs/201702/W020170217493133403781.jpg',
@@ -133,7 +133,7 @@ const blogSummaries: BlogSummary[] = [
     postDate: new Date()
   },
   {
-    postId: 2,
+    id: 2,
     title: 'title2',
     info: 'this is my info 2',
     infoImg: 'http://fun.youth.cn/yl24xs/201702/W020170217493133403781.jpg',
@@ -141,7 +141,7 @@ const blogSummaries: BlogSummary[] = [
     postDate: new Date()
   },
   {
-    postId: 2,
+    id: 2,
     title: 'title2',
     info: 'this is my info 2',
     infoImg: 'http://fun.youth.cn/yl24xs/201702/W020170217493133403781.jpg',
@@ -149,7 +149,7 @@ const blogSummaries: BlogSummary[] = [
     postDate: new Date()
   },
   {
-    postId: 2,
+    id: 2,
     title: 'title2',
     info: 'this is my info 2',
     infoImg: 'http://fun.youth.cn/yl24xs/201702/W020170217493133403781.jpg',
@@ -157,7 +157,6 @@ const blogSummaries: BlogSummary[] = [
     postDate: new Date()
   }
 ];
-'';
 const blogDetail: BlogDetail = {
   id: 1,
   title: 'first title',
@@ -236,11 +235,11 @@ export class InMemoryDbServiceImpl extends InMemoryDbService {
         {id: 'tags', data: blogTags},
         /**blog/summaries*/
         {id: 'summaries', data: blogSummaries},
-        /**blog/detail/{postId}*/
+        /**blog/detail/{id}*/
         {id: 'detail', data: blogDetail},
         /**blog/postComments/{postId}:*/
         {id: 'postComments', data: blogComments},
-        /**blog/tagSummaries/{tagId}*/
+        /**blog/tagSummaries/{id}*/
         {id: 'tagSummaries', data: blogSummaries}
       ]),
       login: user,

@@ -8,8 +8,8 @@ export const blogRoutes: Routes = [
     path: '', component: BlogComponent,
     children: [
       {path: '', component: DefaultPageComponent},
-      {path: 'tag/:tagId', component: TagPageComponent},
-      {path: 'post/:postId', component: PostPageComponent}
+      {path: 'tag/:id', component: TagPageComponent},
+      {path: 'post/:id', component: PostPageComponent}
     ]
   }
 ];

@@ -14,7 +14,7 @@ import {BlogHttpService} from '../blog.http.service';
 export class TagPageComponent implements OnInit {
   tags: BlogTag[] = [];
   summaries: BlogSummary[] = [];
-  tagId: number = undefined;
+  selectedTagId: number = undefined;
 
   constructor(private blogHttpService: BlogHttpService, private route: ActivatedRoute) {
   }
@@ -26,13 +26,15 @@ export class TagPageComponent implements OnInit {
   }
 
   private loadTagPosts(params: Params): void {
-    this.tagId = params['tagId'];
+    this.selectedTagId = params['id'];
     this.blogHttpService
       .loadTags()
-      .then(tags => this.tags = tags);
-    this.blogHttpService
-      .loadBlogSummariesByTag(this.tagId)
-      .then(summaries => this.summaries = summaries);
+      .then(tags => this.tags = tags)
+      .then(() =>
+        this.blogHttpService
+        .loadBlogSummariesByTag(this.selectedTagId)
+        .then(summaries => this.summaries = summaries));
+
   }
 
 }

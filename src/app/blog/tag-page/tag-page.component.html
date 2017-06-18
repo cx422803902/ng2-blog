@@ -1,19 +1,19 @@
 <div class="head-container">
   <div class="app-container logo-container"></div>
   <div class="app-container tag-container">
-    <app-blog-tag [tagContent]="'home'" [tagLink]="'/'" [selected]="undefined==tagId">所有</app-blog-tag>
+    <app-blog-tag [tagContent]="'home'" [tagLink]="'/'" [selected]="undefined==selectedTagId">所有</app-blog-tag>
     <app-blog-tag *ngFor="let tag of tags"
-                  [tagLink]="'/blog/tag/'+tag.tagId"
-                  [tagContent]="tag.tagContent"
-                  [tagCount]="tag.tagCount"
-                  [selected]="tag.tagId==tagId"></app-blog-tag>
+                  [tagLink]="'/blog/tag/'+tag.id"
+                  [tagContent]="tag.name"
+                  [blogCount]="tag.blogCount"
+                  [selected]="tag.id==selectedTagId"></app-blog-tag>
   </div>
 </div>
 <div class="summary-container">
   <div class="app-container">
     <masonry [options]="{columnWidth:320, fitWidth: true}">
       <app-blog-summary *ngFor="let summary of summaries"
-                        [postId]="summary.postId"
+                        [id]="summary.id"
                         [title]="summary.title"
                         [info]="summary.info"
                         [infoImg]="summary.infoImg"

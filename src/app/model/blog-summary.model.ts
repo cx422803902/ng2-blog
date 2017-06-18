@@ -1,5 +1,5 @@
 export interface BlogSummary {
-  postId: number;
+  id: number;
   title: string;
   info: string;
   infoImg?: string;
@@ -8,7 +8,7 @@ export interface BlogSummary {
 }
 
 export const DEFAULT_BLOG_SUMMARY = {
-  postId: undefined,
+  id: undefined,
   title: undefined,
   info: undefined,
   infoImg: undefined,

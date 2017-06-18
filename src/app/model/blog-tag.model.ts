@@ -1,11 +1,11 @@
 export interface BlogTag {
-  tagId: number;
-  tagContent: string;
-  tagCount: number;
+  id: number,
+  name: string;
+  blogCount: number;
 }
 
 export const DEFAULT_BLOG_TAG = {
-  tagId: undefined,
-  tagContent: undefined,
-  tagCount: undefined
-};
+  id: undefined,
+  name: undefined,
+  blogCount: 0
+}

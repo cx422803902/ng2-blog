@@ -25,12 +25,12 @@ export class PostPageComponent implements OnInit {
   }
 
   private loadPostDetail(params: Params): void {
-    this.blogHttpService.loadBlogDetail(params['postId'])
+    this.blogHttpService.loadBlogDetail(params['id'])
       .then(detail => {
         this.blogDetail = detail;
         jQuery(".post-content").html(this.blogDetail.content);
       });
-    this.blogHttpService.loadBlogCommentsByPost(params['postId'])
+    this.blogHttpService.loadBlogCommentsByPost(params['id'])
       .then(comments => this.blogComments = comments);
   }
 

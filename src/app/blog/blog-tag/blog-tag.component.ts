@@ -8,7 +8,7 @@ import {Component, Input, OnInit} from '@angular/core';
 export class BlogTagComponent implements OnInit {
   @Input() tagLink: string;
   @Input() tagContent: string;
-  @Input() tagCount: number;
+  @Input() blogCount: number;
   @Input() selected: boolean;
   constructor() { }
 

@@ -6,7 +6,7 @@ import {Component, Input, OnInit} from '@angular/core';
   styleUrls: ['./blog-summary.component.less']
 })
 export class BlogSummaryComponent implements OnInit {
-  @Input() postId: number;
+  @Input() id: number;
   @Input() title: string;
   @Input() info: string;
   @Input() infoImg: string;

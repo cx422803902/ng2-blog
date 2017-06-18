@@ -13,7 +13,7 @@ import {BlogHttpService} from '../blog.http.service';
 export class DefaultPageComponent implements OnInit {
   tags: BlogTag[] = [];
   summaries: BlogSummary[] = [];
-  tagId: number = undefined;
+  selectedTagId: number = undefined;
 
   constructor(private blogHttpService: BlogHttpService) {
   }

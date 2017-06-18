@@ -23,7 +23,7 @@ export class BlogHttpService {
           let items: any[] = response.json().data;
           for (let i = 0; i < items.length; i++) {
             let item: any = items[i];
-            blogTags.push({tagId: item.tagId, tagContent: item.tagContent, tagCount: item.tagCount});
+            blogTags.push({id: item.id, name: item.name, blogCount: item.blogCount});
           }
           return blogTags;
         }
@@ -42,7 +42,7 @@ export class BlogHttpService {
           for (let i = 0; i < items.length; i++) {
             let item: any = items[i];
             blogSummaries.push({
-              postId: item.postId,
+              id: item.id,
               title: item.title,
               info: item.info,
               infoImg: item.infoImg,
@@ -58,7 +58,7 @@ export class BlogHttpService {
 
   loadBlogSummariesByTag(tagId: number): Promise<BlogSummary[]> {
     let body : any = {
-      tagId: tagId
+      id: tagId
     };
     return this.http
       .post(URLS.tagPosts, body)
@@ -70,7 +70,7 @@ export class BlogHttpService {
           for (let i = 0; i < items.length; i++) {
             let item: any = items[i];
             blogSummaries.push({
-              postId: item.postId,
+              id: item.id,
               title: item.title,
               info: item.info,
               infoImg: item.infoImg,
@@ -84,9 +84,9 @@ export class BlogHttpService {
       .toPromise();
   }
 
-  loadBlogDetail(postId: number): Promise<BlogDetail> {
+  loadBlogDetail(id: number): Promise<BlogDetail> {
     let body: any = {
-      postId: postId
+      id: id
     };
     return this.http
       .post(URLS.detail, body)
