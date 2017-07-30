@@ -1,14 +1,14 @@
-import { BlogChenxingPage } from './app.po';
+import { FrontEndPage } from './app.po';
 
-describe('blog-chenxing App', () => {
-  let page: BlogChenxingPage;
+describe('front-end App', () => {
+  let page: FrontEndPage;
 
   beforeEach(() => {
-    page = new BlogChenxingPage();
+    page = new FrontEndPage();
   });
 
-  it('should display message saying app works', () => {
+  it('should display welcome message', () => {
     page.navigateTo();
-    expect(page.getParagraphText()).toEqual('app works!');
+    expect(page.getParagraphText()).toEqual('Welcome to app!!');
   });
 });

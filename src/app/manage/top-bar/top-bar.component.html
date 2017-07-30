@@ -1,6 +1,0 @@
-<a href class="logo-link clearfix block-link">GoIot's Admin</a>
-<a href class="collapse-link block-link" (click)="doFlipMenuCollapsed()"></a>
-<div class="user-info-panel">
-  <a *ngIf="getUserAuthService().getUser() != undefined" class="block-link">{{getUserAuthService().getUser().userName}}</a>
-  <a href class="block-link" (click)="doLogout()">退出</a>
-</div>
