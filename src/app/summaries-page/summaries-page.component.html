@@ -1,0 +1,18 @@
+<article *ngFor="let summary of summaries">
+  <header>
+    <h2 class="title"><a routerLink="/p/{{summary.id}}">{{summary.title}}</a></h2>
+  </header>
+  <section><a class="post-content" routerLink="/p/{{summary.id}}"><p>{{summary.summary}}</p></a></section>
+  <footer>
+    <div class="categories-container">
+      <span>分类：</span>
+      <a *ngFor="let category of summary.categories" routerLink="/s/{{constService.SUMMARY_FOR_CATEGORY}}/{{category.id}}"><span>{{category.name}}</span></a>
+    </div>
+    <br>
+    <div>
+      <span class="pull-left">{{summary.postDate | date:'y年MM月dd日'}}</span><span class="count-container">访问数: {{summary.viewCount}}</span>
+    </div>
+  </footer>
+  <hr>
+</article>
+

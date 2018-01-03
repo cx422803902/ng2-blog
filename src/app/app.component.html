@@ -1,0 +1,13 @@
+<main>
+  <div class="secondary-container">
+    <app-navbar></app-navbar>
+  </div>
+  <div class="primary-container" #primaryContainer>
+    <router-outlet></router-outlet>
+    <footer>
+      <div class="copy" class="text-center">@<a href="http://www.goiot.org">chenxing</a> 2017.7</div>
+    </footer>
+  </div>
+</main>
+<button id="back-top-btn" class="btn-primary" ngClass="{hide:hideBtn}" (click)="backToTop()">返回頂部</button>
+

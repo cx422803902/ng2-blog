@@ -1,0 +1,43 @@
+<script src="navbar.component.ts"></script>
+<div class="root-container">
+  <md-card class="avatar-container mat-elevation-z">
+    <img md-card-avatar src="assets/avatar.jpeg" class="center-block">
+    <md-card-title class="text-center">Goiot</md-card-title>
+  </md-card>
+  <div class="socials-container">
+    <ul>
+      <li><a href="https://github.com/cx422803902" target="_blank" class="fa fa-github"></a></li>
+    </ul>
+  </div>
+  <hr>
+  <div class="categories-container">
+    <h3>分类</h3>
+    <ul>
+      <li *ngFor="let category of categories">
+        <a routerLink="/s/{{constService.SUMMARY_FOR_CATEGORY}}/{{category.id}}">
+          <span>{{category.name}}</span>
+          <span class="pull-right">{{category.count}}</span>
+        </a>
+      </li>
+    </ul>
+  </div>
+  <hr>
+  <div class="tags-container">
+    <h3>标签</h3>
+    <ul>
+      <li *ngFor="let tag of tags"><a routerLink="/s/{{constService.SUMMARY_FOR_TAG}}/{{tag.id}}">{{tag.name}}</a></li>
+    </ul>
+  </div>
+  <hr>
+  <div class="archives-container">
+    <h3>归档</h3>
+    <ul>
+      <li *ngFor="let archive of archives">
+        <a routerLink="/s/{{constService.SUMMARY_FOR_ARCHIVE}}/{{archive.date | date:'yMM'}}">
+          <span>{{archive.date | date:'y年MM月'}}</span>
+          <span class="pull-right">{{archive.count}}</span>
+        </a>
+      </li>
+    </ul>
+  </div>
+</div>

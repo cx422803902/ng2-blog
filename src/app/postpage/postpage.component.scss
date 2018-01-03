@@ -1,0 +1,59 @@
+:host {
+  display: block;
+  position: relative;
+  width: 80%;
+  max-width: 710px;
+  min-height: 100%;
+  height: auto;
+  margin: 0 auto;
+  panding: 0 40px;
+
+  .title {
+    font-size: 2.6em;
+    line-height: 1.3;
+    font-weight: bolder;
+    text-align: center;
+    a {
+      color: #000;
+    }
+  }
+
+  // deep set for dynamic html style
+  /deep/ #post-content {
+    pre {
+      word-break: break-all;
+      word-wrap: break-word;
+      white-space: pre-wrap;
+    }
+  }
+  #post-comment-root {
+    #post-new-comment {
+      width: 100%;
+      min-height: 100px;
+    }
+
+    /deep/ .post-comment {
+      .post-comment-secondary {
+        width: 10%;
+        height: 100%;
+        display: inline-block;
+        position: relative;
+      }
+      .post-comment-primary {
+        width: 80%;
+        height: 100%;
+        display: inline-block;
+        position: relative;
+      }
+      .post-comment-author {
+        font-size: medium;
+        font-weight: bold;
+      }
+    }
+  }
+
+
+}
+
+
+

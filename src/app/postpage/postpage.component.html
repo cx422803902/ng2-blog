@@ -1,0 +1,35 @@
+<script src="postpage.component.ts"></script>
+<article *ngIf="post !== null" #hehe>
+  <header>
+    <h2 class="title text-center">{{post.title}}</h2>
+    <div class="text-center"><span>{{post.postDate | date:'y年MM月dd日'}}</span></div>
+  </header>
+  <br>
+  <section id="post-content">
+    <div *ngIf="post !== null" innerHtml="{{post.content}}">
+      <script>
+        console.log('hehe');
+      </script>
+    </div>
+  </section>
+  <hr>
+  <footer>
+    <div id="post-comment-root">
+      <label>评论:</label>
+      <div>
+        <textarea id="post-new-comment" #postNewComment></textarea>
+        <button class="pull-right" (click)="submitComment()">提交</button>
+      </div>
+      <div *ngFor="let comment of comments" class="post-comment">
+        <hr>
+        <div class="post-comment-secondary"></div>
+        <div class="post-comment-primary">
+          <p><a class="post-comment-author">{{comment.author}}</a> created on {{comment.createTime | date:'y-MM-dd hh:mm:ss'}}</p>
+          <br>
+          <p>{{comment.content}}</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+</article>
+

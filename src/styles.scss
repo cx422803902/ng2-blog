@@ -1,0 +1,33 @@
+/* You can add global styles to this file, and also import other style files */
+
+@import "~@angular/material/prebuilt-themes/deeppurple-amber.css";
+@import "~bootstrap/dist/css/bootstrap.min.css";
+@import "assets/font-awesome-4.7.0/css/font-awesome.min.css";
+
+* {
+  font-family: -apple-system,"Helvetica Neue",Arial,"PingFang SC","Hiragino Sans GB",STHeiti,"Microsoft YaHei","Microsoft JhengHei","Source Han Sans SC","Noto Sans CJK SC","Source Han Sans CN","Noto Sans SC","Source Han Sans TC","Noto Sans CJK TC","WenQuanYi Micro Hei",SimSun,sans-serif;
+}
+
+//angular's css can not influent dynamic dom element
+
+
+//scroll for chrome
+::-webkit-scrollbar {
+  width: 6px;height:6px;
+}
+::-webkit-scrollbar-track-piece{
+  background-color: #eee;
+  margin: -2px;
+}
+::-webkit-scrollbar-thumb{
+  background: #aaa;
+  min-height: 150px;
+  min-width: 150px;
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:vertical:hover{
+  background: #aaa;
+}
+::-webkit-scrollbar-thumb:horizontal:hover{
+  background: #aaa;
+}
